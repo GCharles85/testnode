@@ -1,0 +1,10 @@
+#Gives commands to the Travis CI engine to run 
+#Docker and build the app 
+
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build -t algofields/node . #build the img
+  - docker images algofields/node #use the img
